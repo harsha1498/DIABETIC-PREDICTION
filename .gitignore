@@ -1,0 +1,39 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django
+db.sqlite3
+*.log
+*.pot
+*.mo
+
+# Virtual Environment
+venv/
+env/
+.virtualenv/
+
+# Media and Static
+media/
+static/
+
+# Django Migrations
+*/migrations/*.pyc
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Environment Variables
+.env
+settings_local.py
+local_settings.py
+
+# Docker (optional)
+Dockerfile
+docker-compose.yml
+.docker/

@@ -1,0 +1,37 @@
+{% extends "includes/header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    .content-box {
+        border: 2px solid greenyellow; /* Set border color and width */
+        border-radius: 8px; /* Optional: round the corners */
+        padding: 20px; /* Add padding inside the box */
+        background-color: white; /* Background color of the box */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        margin: 0px; /* Center the box */
+        margin-bottom: 5px; /* Set a maximum width */
+    }
+</style>
+
+
+    <div class="content-box">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" >Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+
+            By registering, you accept the Terms of Service and Privacy Notice
+
+            <div class="form-group pt-5">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="pt-3 mb-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

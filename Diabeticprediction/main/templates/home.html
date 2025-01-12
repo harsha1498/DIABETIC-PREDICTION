@@ -1,0 +1,62 @@
+{% extends "includes/header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    .suggests{
+        border: 2px solid red;
+        background-color: rgb(224, 218, 151);
+        border-radius: 4px;
+        padding-left: 2px;
+        text-align: center;
+        font-size: smaller;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .content-box {
+        border: 2px solid greenyellow; /* Set border color and width */
+        border-radius: 8px; /* Optional: round the corners */
+        padding: 20px; /* Add padding inside the box */
+        background-color: white; /* Background color of the box */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        margin: 0px; /* Center the box */
+        margin-bottom: 5px; /* Set a maximum width */
+      }
+        
+</style>
+
+    <div class="content-box">
+        <div class="note">
+            <strong>Note:</strong>Please enter your values below. The values displayed are examples; you can enter your own custom values.
+        </div>
+        <p class=""></p>
+        <form id="predictForm" method="post" class="prediction-form">
+            {% csrf_token %}
+            <h2>Diabetes Prediction Form</h2>
+            {{ form.as_p }}  <!-- Render the form fields as paragraph elements -->
+            <center>
+                <button type="submit" name="button" value="predict"  style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;"
+                onmouseover="this.style.backgroundColor='#45a049'" 
+                onmouseout="this.style.backgroundColor='#4CAF50'">Predict</button>
+            </center>
+        </form>
+        <div class="note">
+            <strong>Note:</strong> The predictions made by this application are not guaranteed to be accurate and should be used for informational purposes only. Users are encouraged to consult healthcare professionals for medical advice and diagnoses.
+        </div>
+        {% if user.is_authenticated %}
+            {% if result1 %}
+            <div>
+                <h3>Prediction Result:</h3>
+                <p class="result {{ result1|lower }}">{{ result1 }}</p>
+                <p class="disclaimer">Note: This prediction is not accurate and should be used for informational purposes only.</p>
+            </div>
+            {% endif %}
+        {% else %}
+        <div class ="suggests">
+        <h3  >You must be login to see the prediction Result <a 
+           style="color:red;" href="{% url 'login' %}">click login.</a></h3>
+        </div>
+        {% endif %}
+</div>
+    </div>
+   
+
+{% endblock content %}

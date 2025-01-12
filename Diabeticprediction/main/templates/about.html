@@ -1,0 +1,121 @@
+{% extends "includes/header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+        position: relative;
+    }
+    h1, h2, h3 {
+        color: #0056b3;
+    }
+    h1 {
+        text-align: center;
+    }
+    code {
+        background-color: #e9ecef;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+    .content-box {
+        border: 2px solid greenyellow; /* Set border color and width */
+        border-radius: 8px; /* Optional: round the corners */
+        padding: 20px; /* Add padding inside the box */
+        background-color: white; /* Background color of the box */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        margin: 0px; /* Center the box */
+        margin-bottom: 5px; /* Set a maximum width */
+      }
+      .author {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 30px;
+        color: #555;
+    }
+</style>
+
+<div class="content-box">
+    <h1>Diabetes Prediction Web Application Documentation</h1>
+
+    <h2>Overview</h2>
+    <p>The <strong>Diabetes Prediction Web Application</strong> is a Django-based platform designed to help users assess their risk of diabetes. Utilizing machine learning, specifically logistic regression, the application predicts whether an individual is likely to have diabetes based on various health metrics. With a user authentication system, the application allows for personalized experiences, enabling users to securely log in, access their profiles, and receive tailored insights into their health status.</p>
+    
+    <div class="note">
+        <strong>Note:</strong> The predictions made by this application are not guaranteed to be accurate and should be used for informational purposes only. Users are encouraged to consult healthcare professionals for medical advice and diagnoses.
+    </div>
+    
+    <h2>Features</h2>
+    <ul>
+        <li><strong>User Authentication:</strong> A secure login and registration system allows users to create accounts, log in, and manage their profiles.</li>
+        <li><strong>User-Friendly Interface:</strong> An intuitive design facilitates easy navigation throughout the application.</li>
+        <li><strong>Input Health Metrics:</strong> Users can enter key health indicators required for making predictions.</li>
+        <li><strong>Real-Time Predictions:</strong> Immediate feedback is provided regarding diabetes risk based on user inputs.</li>
+        <li><strong>Clear Results Interpretation:</strong> The application categorizes users as either "Diabetic" or "Non-Diabetic" based on the model’s predictions.</li>
+        <li><strong>Error Handling:</strong> Users are informed of invalid inputs to ensure a smooth experience.</li>
+    </ul>
+    
+    <h2>Installation Instructions</h2>
+    <ol>
+        <li><strong>Requirements:</strong> Ensure that Python (preferably version 3.x) is installed on your system.</li>
+        <li><strong>Install Required Packages:</strong> Use a package manager like <code>pip</code> to install the necessary libraries for the project.</li>
+        <li><strong>Project Setup:</strong> Clone or copy the project files to your local environment.</li>
+    </ol>
+    
+    <h2>Usage Instructions</h2>
+    
+    <h3>Starting the Application</h3>
+    <ol>
+        <li><strong>Navigate to Project Directory:</strong> Use a command line interface to go to your project folder.</li>
+        <li><strong>Run the Server:</strong> Start the Django development server to make the application accessible locally.</li>
+        <li><strong>Access the Application:</strong> Open a web browser and enter the local server address to view the application interface.</li>
+    </ol>
+    
+    <h3>User Authentication</h3>
+    <ul>
+        <li><strong>Registration:</strong> New users can create an account by providing necessary information such as username, email, and password.</li>
+        <li><strong>Login:</strong> Existing users can log in using their credentials. This ensures that user data and prediction results are securely associated with their accounts.</li>
+        <li><strong>Logout:</strong> Users can log out to secure their session, ensuring that unauthorized individuals cannot access their personal information.</li>
+    </ul>
+    
+    <h3>User Interaction</h3>
+    <ul>
+        <li><strong>Home Page:</strong> Users are greeted with a landing page that provides navigation to the prediction section and user authentication features.</li>
+        <li><strong>Prediction Form:</strong> After logging in, users can access the prediction page to enter the required health metrics, such as glucose level, blood pressure, etc.</li>
+    </ul>
+    
+    <h3>Prediction Process</h3>
+    <ol>
+        <li><strong>User Input:</strong> When the user submits the form, the application retrieves the input values.</li>
+        <li><strong>Data Processing:</strong> The application loads a CSV file containing a dataset with historical diabetes data to train the logistic regression model.</li>
+        <li><strong>Model Training:</strong> The application splits the dataset into training and testing sets, trains the logistic regression model, and uses it to make predictions based on user inputs.</li>
+        <li><strong>Result Output:</strong> The model returns a prediction indicating whether the user is "Diabetic" or "Non-Diabetic."</li>
+    </ol>
+    
+    <h3>Error Handling</h3>
+    <p>The application includes mechanisms to handle invalid inputs. If the user enters non-numeric values, a user-friendly error message is displayed, prompting them to provide valid numeric entries.</p>
+    
+    <h2>Conclusion</h2>
+    <p>The Diabetes Prediction Web Application is a practical tool for individuals seeking to understand their risk of diabetes through quantitative health metrics. With the added functionality of user authentication, the application allows users to securely manage their profiles and receive personalized insights. By offering real-time predictions and straightforward interpretations, this application serves as a valuable resource for health management and awareness.</p>
+    
+    <h2>Future Improvements</h2>
+    <ul>
+        <li><strong>Enhanced User Profiles:</strong> Allow users to save and track their health metrics over time.</li>
+        <li><strong>Data Visualization:</strong> Integrate visual representations of health data and predictions to enhance user engagement and understanding.</li>
+        <li><strong>Mobile Optimization:</strong> Adapt the web application for mobile devices to increase accessibility and usability.</li>
+    </ul>
+    <div class="author">
+        <p><strong>Author: SRI HARSHA JAMPANI</strong></p><br>
+        <p><strong>Mail:jampaniharsha6105@gmail.com</strong></p><br>
+
+    </div>
+</div>
+
+{% endblock content %}

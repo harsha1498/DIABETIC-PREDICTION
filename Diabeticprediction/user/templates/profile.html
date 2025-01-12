@@ -1,0 +1,62 @@
+{% extends "includes/header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    .content-box {
+        border: 2px solid greenyellow; /* Set border color and width */
+        border-radius: 8px; /* Optional: round the corners */
+        padding: 20px; /* Add padding inside the box */
+        background-color: white; /* Background color of the box */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        margin: 0px; /* Center the box */
+        margin-bottom: 5px; /* Set a maximum width */
+    }
+    .detail-box{
+        text-align-last: center;
+    }
+</style>
+<div class="content-box col-lg-12 col-md-12 col-sm-12 tutorial-style" style="min-height:65vh;">
+    <legend class="border-bottom mb-4">Profile Information:</legend>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="media">
+            <div class="media-body">
+                <h2 class="account-heading">{{ form.instance.username }}</h2>
+                <div class="detail-box">
+                <p class="text-secondary">{{ form.instance.first_name }} {{ form.instance.last_name }}</p>
+                <p class="text-secondary">{{ form.instance.email }}</p>
+                <p class="text-secondary">{{ form.instance.description }}</p>
+                </div>
+            </div>
+        </div>
+
+        {% if user.username == form.instance.username %}
+            <fieldset class="form-group">
+                {% csrf_token %}
+                <legend class="border-bottom mb-4">Edit Profile Information</legend>
+               
+                <div >
+                    <div class="form-group col-md-6 mb-0">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0 pb-1">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                </div> 
+
+                
+            
+                
+
+                <a  href="{% url 'PasswordRest' %}">Change password?</a>
+            </fieldset>
+            <div class="form-group pt-2 pb-1">
+                <button class="btn btn-outline-info" type="submit">Update</button>
+            </div>
+        {% endif %}
+    </form>
+</div>
+{% endblock content %}
