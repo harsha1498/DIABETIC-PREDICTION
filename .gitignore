@@ -15,9 +15,7 @@ venv/
 env/
 .virtualenv/
 
-# Media and Static
-media/
-static/
+
 
 # Django Migrations
 */migrations/*.pyc

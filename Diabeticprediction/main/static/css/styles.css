@@ -1,0 +1,84 @@
+/* header.html Css */
+body {
+    font-family: 'Karla', sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Markazi Text', serif;
+    letter-spacing: 2px;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333333;
+    margin: 1rem 0;
+  }
+  
+  p, ul {
+    font-size: 1.25rem;
+  }
+  
+  a {
+  
+    color: #EE9972;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+    
+
+/* home.html Css */
+
+  .result {
+          font-size: 28px;  /* Increase font size for better visibility */
+          font-weight: bold; /* Make it bold */
+          padding: 15px;    /* Add more padding */
+          border-radius: 5px; /* Rounded corners */
+          text-align: center; /* Center align text */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+          margin-top: 20px; /* Space above the result */
+          transition: all 0.3s ease; /* Smooth transition for hover effect */
+      }
+
+      .diabetic {
+          background-color: #ff4d4d; /* Bright red for diabetic */
+          color: white;              /* White text */
+      }
+
+      .non-diabetic {
+          background-color: #4CAF50; /* Bright green for non-diabetic */
+          color: white;              /* White text */
+      }
+
+      .result:hover {
+          transform: scale(1.05); /* Slightly enlarge on hover */
+          cursor: pointer; /* Change cursor to pointer */
+      }
+
+      /* Watermark */
+      
+      .note {
+          background-color: #ffebcd;
+          border-left: 5px solid #f39c12;
+          padding: 10px;
+          margin: 20px 0;
+      }
+      
+      /* Disclaimer styling */
+      .disclaimer {
+          font-size: 14px; /* Smaller font for disclaimer */
+          color: #555;     /* Dark grey color */
+          text-align: center; /* Center align disclaimer */
+      }
