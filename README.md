@@ -55,3 +55,26 @@ A Django-based platform for assessing diabetes risk using machine learning (logi
 ## Author
 **Sri Harsha Jampani**  
 Email: [jampaniharsha6105@gmail.com](mailto:jampaniharsha6105@gmail.com)
+
+
+
+
+####images
+##Home
+![Screenshot 2025-01-16 144608](https://github.com/user-attachments/assets/37574d8f-f3c1-4037-80f4-7c26637af813)
+
+##Login
+![Screenshot 2025-01-16 143703](https://github.com/user-attachments/assets/1aa54cf0-ac0a-45eb-9b53-5c07b4619cf7)
+
+##Signup
+
+![Screenshot 2025-01-16 144620](https://github.com/user-attachments/assets/f48c4db2-0bc5-4b35-9edb-589f35b95a98)
+
+##Profile
+
+![Screenshot 2025-01-16 151705](https://github.com/user-attachments/assets/63e9a653-ca33-446d-86ec-a224bf7172d4)
+
+
+
+
+
