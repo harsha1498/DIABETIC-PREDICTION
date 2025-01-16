@@ -1,7 +1,57 @@
-<<<<<<< HEAD
-# Diabetic_Prediction-
-Meri Skill Internship Project
-=======
-# Diabetic-Prediction
-MERI SKILL Intership Project
->>>>>>> 3f0a1af6285371f080dd47341190376472942ea7
+# Diabetes Prediction Web Application
+
+## Overview
+A Django-based platform for assessing diabetes risk using machine learning (logistic regression). Users can log in, manage profiles, and receive personalized health insights based on key health metrics.
+
+> **Note:** Predictions are for informational purposes only. Consult healthcare professionals for medical advice.
+
+---
+
+## Features
+- **User Authentication:** Secure login, registration, and profile management.
+- **Health Metric Input:** Users enter metrics like glucose level, blood pressure, etc.
+- **Real-Time Predictions:** Instant diabetes risk assessment.
+- **Clear Results:** Categorizes users as "Diabetic" or "Non-Diabetic."
+- **Error Handling:** Alerts for invalid inputs.
+
+---
+
+## Installation
+1. Ensure Python 3.x is installed.
+2. Clone the repository:
+   ```bash
+   git clone <repository-link>
+   cd <project-folder>
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Apply migrations:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+---
+
+## Usage
+1. Start the server:
+   ```bash
+   python manage.py runserver
+   ```
+2. Access the application at `http://127.0.0.1:8000`.
+3. Register, log in, and input health metrics for predictions.
+
+---
+
+## Future Improvements
+- Enhanced user profiles for tracking health metrics.
+- Data visualization for better insights.
+- Mobile optimization for improved accessibility.
+
+---
+
+## Author
+**Sri Harsha Jampani**  
+Email: [jampaniharsha6105@gmail.com](mailto:jampaniharsha6105@gmail.com)
